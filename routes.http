@@ -1,0 +1,43 @@
+GET http://localhost:3000/disciplinas
+
+//Não esquecer de mudar os ids conforme forem criados os novos registros
+
+###
+//By id
+GET http://localhost:3000/disciplinas/c4b332f9-9043-4cbb-b8f1-521931f6a660
+
+###
+//By name
+GET http://localhost:3000/disciplinas?nome=Portuguesa
+
+###
+POST http://localhost:3000/disciplinas
+Content-Type: application/json
+
+{
+   "nome": "Lingua Inglesa",
+   "cargaHoraria": 30,
+   "obrigatoria": true
+}
+###
+POST http://localhost:3000/disciplinas
+Content-Type: application/json
+
+{
+   "nome": "Lingua Portuguesa",
+   "cargaHoraria": 60,
+   "obrigatoria": true
+}
+###
+//Update total de alguma das anteriores
+PUT http://localhost:3000/disciplinas/5100cc6f-6bc6-48c1-af94-cec7334af8f3
+Content-Type: application/json
+
+{
+   "nome": "Lingua Espanhola",
+   "cargaHoraria": 15,
+   "obrigatoria": false
+}
+###
+DELETE http://localhost:3000/disciplinas/5100cc6f-6bc6-48c1-af94-cec7334af8f3
+###
